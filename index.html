@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAST START — сайт-портфолио для начинающих специалистов любой профессии</title>
+<meta name="description" content="Сайт-портфолио для начинающих в любой профессии: первая работа, смена сферы, работа за границей. Целевой срок 24 часа. Стоимость 3 000 ₽.">
+<meta property="og:title" content="FAST START — сайт-портфолио для начинающих специалистов">
+<meta property="og:description" content="Личный сайт, который помогает яснее показать себя работодателям. 3 000 ₽, целевой срок 24 часа.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23D92727'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* Цвета и шрифт меняются здесь. Ссылка на Telegram: найдите https://t.me/tataurrov и замените. */
+:root{--accent:#D92727;--bg:#FFFFFF;--ink:#111111;--muted:#4A4A4A;--font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--pad:clamp(20px,5vw,72px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:clamp(1rem,.95rem + .25vw,1.15rem);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{padding:0 var(--pad);width:100%}
+.red{color:var(--accent)}
+.display{font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.03em;overflow-wrap:break-word}
+h2.display{font-size:clamp(1.9rem,5.2vw,4.8rem);margin-bottom:.8em}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;text-decoration:none;padding:16px 28px;border:2px solid var(--accent);transition:background .2s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:5px}
+.link:hover{color:var(--accent)}
+section{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--ink)}
+section.hero{border-top:0;padding-top:clamp(28px,4vw,56px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* hero */
+.mark{font-weight:900;letter-spacing:-.02em;margin-bottom:clamp(32px,6vw,72px)}
+.hero h1{font-size:clamp(2.2rem,9vw,9rem);margin-bottom:.4em}
+.hero-row{display:grid;gap:32px}
+.lede{color:var(--muted);max-width:30em}
+.facts{border-top:1px solid var(--ink);margin-bottom:28px}
+.facts div{display:flex;justify-content:space-between;gap:16px;align-items:baseline;border-bottom:1px solid var(--ink);padding:14px 0}
+.facts b{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:900;letter-spacing:-.02em;white-space:nowrap}
+.facts span{color:var(--muted);text-align:right}
+.actions{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center}
+
+/* audience */
+.a1{display:grid;gap:24px;border-top:1px solid var(--ink);padding-top:32px}
+.a1 h3{font-size:clamp(1.9rem,6vw,5.4rem)}
+.a2{background:var(--ink);color:#fff;padding:clamp(40px,7vw,96px) 0;margin:clamp(48px,7vw,96px) 0}
+.a2 .inner{margin-left:auto;max-width:900px}
+.a2 h3{font-size:clamp(1.7rem,4.6vw,3.8rem);margin-bottom:24px}
+.a2 p{color:#E5E5E5}
+.a3{display:grid;gap:24px;border-left:6px solid var(--accent);padding-left:clamp(16px,3vw,40px)}
+.a3 h3{font-size:clamp(1.7rem,4.4vw,3.8rem)}
+.aud-wrap{padding-bottom:0}
+
+/* about */
+.about{display:grid;gap:24px}
+.about .big{font-size:clamp(1.25rem,2.4vw,2rem);line-height:1.35;font-weight:600;margin-bottom:1em}
+.about p{max-width:36em}
+
+/* included */
+.inc{border-top:1px solid var(--ink);list-style:none;display:grid}
+.inc li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--ink)}
+.inc li::before{content:"";width:12px;height:12px;background:var(--accent);margin-top:.5em}
+.limits{margin-top:32px;color:var(--muted);border-left:3px solid var(--accent);padding-left:16px;max-width:44em}
+
+/* process */
+.steps{list-style:none;display:grid;gap:48px}
+.step .n{display:block;font-size:clamp(4.5rem,12vw,10rem);font-weight:900;line-height:.85;letter-spacing:-.05em;color:var(--accent);margin-bottom:8px}
+.step h3{font-size:1.4rem;margin-bottom:6px}
+.step p{color:var(--muted)}
+
+/* price */
+.price-top{border-top:6px solid var(--ink)}
+.price-grid{display:grid;gap:32px}
+.sum{font-size:clamp(3.6rem,17vw,14rem);font-weight:900;letter-spacing:-.06em;line-height:.9;white-space:nowrap}
+.sum small{display:block;font-size:clamp(1rem,1.6vw,1.4rem);font-weight:600;letter-spacing:0;margin-top:16px;white-space:normal}
+.price-grid p{margin-bottom:1em;max-width:30em}
+
+/* faq */
+details{border-top:1px solid var(--ink)}
+details:last-child{border-bottom:1px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:22px 48px 22px 0;font-weight:600;font-size:1.15em;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.8rem;font-weight:400}
+details[open] summary::after{content:"–"}
+details p{padding:0 48px 24px 0;color:var(--muted);max-width:40em}
+
+/* final + footer */
+.final h2{font-size:clamp(2.2rem,8vw,8rem);max-width:12em;margin-bottom:.6em}
+footer{border-top:1px solid var(--ink);padding:28px 0 36px;font-size:.95rem}
+.foot{display:grid;gap:10px}
+.foot p{color:var(--muted)}
+
+
+/* about photo */
+.photo{position:relative;aspect-ratio:4/5;background:#EDEDED;max-width:420px;width:100%}
+.photo img,.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:12px;color:#555;font-size:.85rem}
+/* reel of first screens */
+.reel-t{margin-top:clamp(40px,6vw,72px);font-weight:600}
+.reel{overflow:hidden;margin-top:16px}
+.track{display:flex;gap:20px;width:max-content;animation:slide 45s linear infinite}
+.dup{display:contents}
+.reel:hover .track{animation-play-state:paused}
+.shot{position:relative;flex:none;width:clamp(260px,38vw,520px);aspect-ratio:16/10;background:#EDEDED;border:1px solid var(--ink);overflow:hidden}
+@keyframes slide{to{transform:translateX(calc(-50% - 10px))}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}.reel{overflow-x:auto}}
+@media (min-width:768px){.about{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}}
+/* планшет и компьютер */
+@media (min-width:768px){
+  .inc{grid-template-columns:1fr 1fr;column-gap:64px}
+}
+@media (min-width:900px){
+  .hero-row{grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+  .a1,.a3{grid-template-columns:1.2fr 1fr;gap:80px}
+  .a2 .inner{margin-right:12%}
+  .steps{grid-template-columns:repeat(4,1fr);gap:32px;align-items:start}
+  .step:nth-child(2){margin-top:56px}
+  .step:nth-child(3){margin-top:112px}
+  .step:nth-child(4){margin-top:168px}
+  .price-grid{grid-template-columns:1.3fr 1fr;gap:80px;align-items:end}
+  .foot{grid-template-columns:1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="mark">FAST<span class="red">.</span>START</div>
+    <h1 class="display">Вас могут заметить не только в&nbsp;резюме<span class="red">.</span></h1>
+    <div class="hero-row">
+      <p class="lede">Делаю сайты-портфолио для начинающих в любой профессии. Для первой работы, смены сферы или поиска работы за границей.</p>
+      <div>
+        <div class="facts">
+          <div><b>3 000 ₽</b><span>за создание сайта-портфолио</span></div>
+          <div><b>24 часа</b><span>целевой срок после получения материалов</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://t.me/tataurrov" target="_blank" rel="noopener">Обсудить свой сайт</a>
+          <a class="link" href="https://t.me/tataurrov" target="_blank" rel="noopener">Как это работает</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about">
+    <figure class="photo">
+      <div class="ph" aria-hidden="true">Здесь будет фото<br>images/ilya-portrait.jpg</div>
+      <!-- ЗАМЕНА ФОТО: положите файл images/ilya-portrait.jpg или поменяйте путь в src -->
+      <img src="images/ilya-portrait.jpg" alt="Илья Татауров" width="800" height="1000" loading="lazy" onerror="this.hidden=true">
+    </figure>
+    <div>
+      <h2 class="display">Обо мне</h2>
+      <p class="big">Я Илья Татауров. Около двух лет работаю в SMM в крупной компании.</p>
+      <p>Научился показывать свою работу и искать возможности в разных городах, включая Москву. Знаю, каково начинать, поэтому помогаю другим показать себя яснее. Работу сайт не гарантирует.</p>
+    </div>
+  </div>
+</section>
+
+<section class="aud-wrap">
+  <div class="wrap">
+    <h2 class="display">Кому подойдёт</h2>
+    <div class="a1">
+      <h3 class="display">Вы только начинаете свой путь в&nbsp;профессии<span class="red">.</span></h3>
+      <p>Опыта мало, но есть учебные работы и личные проекты. Сайт собирает их в одну ссылку.</p>
+    </div>
+  </div>
+  <div class="a2">
+    <div class="wrap"><div class="inner">
+      <h3 class="display">Хотите работать с&nbsp;крупными компаниями, в&nbsp;том числе за&nbsp;границей</h3>
+      <p>Заметнее тот, чей профиль читается за минуту. Сайт делает ваши навыки видимыми.</p>
+    </div></div>
+  </div>
+  <div class="wrap" style="padding-bottom:clamp(56px,9vw,120px)">
+    <div class="a3">
+      <h3 class="display">Не знаете, как правильно себя преподнести</h3>
+      <p>Разберём, что у вас есть и что показать. Оформим это в сайт.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="display">Что входит в&nbsp;3&nbsp;000&nbsp;₽</h2>
+    <ul class="inc">
+      <li>Одностраничный сайт под вас</li>
+      <li>Помощь с оформлением профиля</li>
+      <li>Версия для компьютера и телефона</li>
+      <li>Рекомендации, как использовать сайт в откликах</li>
+      <li>Публикация на моём хостинге и домене, хранение один год</li>
+      <li>Короткая инструкция по замене текстов и фото</li>
+    </ul>
+    <p class="limits">Любая профессия, любая страна. Условие одно: минимум правок. Сложные интеграции и сопровождение не входят.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="display" style="margin-bottom:1em">Как это работает</h2>
+    <ol class="steps">
+      <li class="step"><span class="n" aria-hidden="true">1</span><h3>Обсуждаем задачу</h3><p>Пишете в Telegram, обсуждаем вашу цель.</p></li>
+      <li class="step"><span class="n" aria-hidden="true">2</span><h3>Собираем материалы</h3><p>Присылаете информацию и проекты. 24 часа считаются с этого момента.</p></li>
+      <li class="step"><span class="n" aria-hidden="true">3</span><h3>Согласуем версию</h3><p>Смотрите результат до публикации. Правки минимальные.</p></li>
+      <li class="step"><span class="n" aria-hidden="true">4</span><h3>Оплата и публикация</h3><p>После оплаты публикую сайт.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="price-top">
+  <div class="wrap">
+    <p class="sum" aria-label="Три тысячи рублей">3&nbsp;000&nbsp;₽<span class="red">.</span><small>за создание сайта-портфолио, одной суммой</small></p>
+    <a class="btn" style="margin-top:20px" href="https://t.me/tataurrov" target="_blank" rel="noopener">Обсудить свой сайт</a>
+    <p class="reel-t">Первые экраны готовых сайтов</p>
+  </div>
+  <!-- ЛЕНТА ПРИМЕРОВ: положите скриншоты первых экранов в images/work-1.jpg ... work-6.jpg (рекомендуем 1600×1000 px, до 300 КБ). Второй набор ниже нужен для бесшовной прокрутки: его менять не нужно, он повторяет первый. -->
+  <div class="reel"><div class="track"><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 1<br>images/work-1.jpg</div><img src="images/work-1.jpg" alt="Первый экран готового сайта 1" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 2<br>images/work-2.jpg</div><img src="images/work-2.jpg" alt="Первый экран готового сайта 2" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 3<br>images/work-3.jpg</div><img src="images/work-3.jpg" alt="Первый экран готового сайта 3" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 4<br>images/work-4.jpg</div><img src="images/work-4.jpg" alt="Первый экран готового сайта 4" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 5<br>images/work-5.jpg</div><img src="images/work-5.jpg" alt="Первый экран готового сайта 5" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 6<br>images/work-6.jpg</div><img src="images/work-6.jpg" alt="Первый экран готового сайта 6" loading="lazy" onerror="this.hidden=true"></figure><div class="dup" aria-hidden="true"><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 1<br>images/work-1.jpg</div><img src="images/work-1.jpg" alt="" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 2<br>images/work-2.jpg</div><img src="images/work-2.jpg" alt="" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 3<br>images/work-3.jpg</div><img src="images/work-3.jpg" alt="" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 4<br>images/work-4.jpg</div><img src="images/work-4.jpg" alt="" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 5<br>images/work-5.jpg</div><img src="images/work-5.jpg" alt="" loading="lazy" onerror="this.hidden=true"></figure><figure class="shot"><div class="ph" aria-hidden="true">Первый экран сайта 6<br>images/work-6.jpg</div><img src="images/work-6.jpg" alt="" loading="lazy" onerror="this.hidden=true"></figure></div></div></div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="display">Вопросы</h2>
+    <div>
+      <details><summary>Что делать, если у меня пока нет кейсов?</summary><p>Покажем учебные, тестовые и личные работы. Выдуманных кейсов не будет.</p></details>
+      <details><summary>Кто поможет с текстами?</summary><p>Вы присылаете факты, я помогаю их сформулировать. Итог согласуем.</p></details>
+      <details><summary>Можно ли поставить свои фотографии?</summary><p>Да. Пришлите их вместе с материалами.</p></details>
+      <details><summary>Как изменить сайт после публикации?</summary><p>Тексты и фото можно поменять по инструкции. Сопровождение сайта — отдельная услуга: правка после публикации стоит от 1&nbsp;500 до 5&nbsp;000&nbsp;₽ в зависимости от сложности.</p></details>
+      <details><summary>Где будет размещён сайт?</summary><p>На моём хостинге и домене, оплачивать их вам не нужно. Сайт хранится в течение года. Если захотите сохранить его дольше, напишите мне.</p></details>
+      <details><summary>Гарантирует ли сайт трудоустройство?</summary><p>Нет. Он помогает показать профиль яснее, решение принимает работодатель.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="display">Первый шаг&nbsp;— одно сообщение<span class="red">.</span></h2>
+    <a class="btn" href="https://t.me/tataurrov" target="_blank" rel="noopener">Обсудить свой сайт</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div style="font-weight:900;letter-spacing:-.02em">FAST<span class="red">.</span>START</div>
+    <p>Сайты-портфолио для начинающих специалистов.</p>
+    <p>Автор проекта: Илья Татауров</p>
+  </div>
+</footer>
+
+</body>
+</html>
